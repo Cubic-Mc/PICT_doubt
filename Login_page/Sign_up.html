@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Login Form </title>
-    <link rel="stylesheet" href="login.css" />
+    <title> Sign up </title>
+    <link rel="stylesheet" href="Sign_up.css" />
 </head>
 
 <body>
     <div class="container">
         <form action="#">
-            <h2>Login</h2>
+            <h2>Sign up</h2>
+            <div class="input-field">
+                <input type="text" required />
+                <label>Enter Username</label>
+            </div>
             <div class="input-field">
                 <input type="text" required />
                 <label>Enter email</label>
@@ -20,17 +24,11 @@
                 <input type="password" required />
                 <label>Enter password</label>
             </div>
-            <div class="forget">
-                <label for="Save-login">
-                    <input type="checkbox" id="Save-login" />
-                    <p>Save login information</p>
-                </label>
-                <a href="#">Forgot password?</a>
+            <div class="input-field">
+                <input type="Confirm_Password" required />
+                <label>Confirm password</label>
             </div>
-            <button type="submit">Log In</button>
-            <div class="Create-account">
-                <p>Don't have an account? <a href="Sign_up.html">Create account</a></p>
-            </div>
+            <button type="submit">Sign Up</button>
         </form>
     </div>
 </body>
