@@ -14,16 +14,16 @@ main {
   }
   
   .topnav ul {
-    margin: 10px;
-    padding: 0px 200px 0px 0px;
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
     list-style-type: none;
-    background-color: #eee7e7;
+    background-color: #323232;
     overflow: hidden;
   }
   /* Style the links inside the navigation bar */
   .topnav a {
     float: right;
-    color: #e55656;
+    color: #f0ebeb;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -32,13 +32,13 @@ main {
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #f4bfbf;
+    background-color: #aca9a9;
     color: rgb(245, 236, 236);
     text-underline-offset: #fff;
   }
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #6becb4;
     color: white;
   }
