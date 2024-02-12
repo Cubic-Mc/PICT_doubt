@@ -39,16 +39,6 @@ main {
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #f29191;
-    color: rgb(231, 219, 219);
+    background-color: #04AA6D;
+    color: white;
   }
-  .image-container {
-    width: 300px; /* Set container width */
-    margin: 0 auto; /* Center the container */
-}
-
-img {
-    width: 100%; /* Make the image responsive, fill its container */
-    border-radius: 10px; /* Apply rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-}
