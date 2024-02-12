@@ -1,41 +1,22 @@
 <?php
-    include("connection.php");
-?>
-<!DOCTYPE html>
-<html>
+    include('connection.php');
+    if (isset($_POST['submit'])) {
+        $username = $_POST['user'];
+        $password = $_POST['pass'];
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Login Form </title>
-    <link rel="stylesheet" href="login.css" />
-</head>
-
-<body>
-    <div class="container">
-        <form action="#">
-            <h2>Login</h2>
-            <div class="input-field">
-                <input type="text" required />
-                <label>Enter email</label>
-            </div>
-            <div class="input-field">
-                <input type="password" required />
-                <label>Enter password</label>
-            </div>
-            <div class="forget">
-                <label for="Save-login">
-                    <input type="checkbox" id="Save-login" />
-                    <p>Save login information</p>
-                </label>
-                <a href="#">Forgot password?</a>
-            </div>
-            <button type="submit">Log In</button>
-            <div class="Create-account">
-                <p>Don't have an account? <a href="Sign_up.html">Create account</a></p>
-            </div>
-        </form>
-    </div>
-</body>
-
-</html>
+        $sql = "select * from login where username = '$username' and password = '$password'";  
+        $result = mysqli_query($conn, $sql);  
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+        $count = mysqli_num_rows($result);  
+        
+        if($count == 1){  
+            header("Location: welcome.php");
+        }  
+        else{  
+            echo  '<script>
+                        window.location.href = "index.php";
+                        alert("Login failed. Invalid username or password!!")
+                    </script>';
+        }     
+    }
+    ?>
