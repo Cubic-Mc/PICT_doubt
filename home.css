@@ -14,8 +14,8 @@ main {
   }
   
   .topnav ul {
-    margin: 10px;
-    padding: 0px 200px 0px 0px;
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
     list-style-type: none;
     background-color: #eee7e7;
     overflow: hidden;
