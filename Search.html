@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Bar Example</title>
+<link rel="stylesheet" href="search.css">
+<style>
+  #searchInput {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 20px;
+  }
+  #searchResults {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<input type="text" id="searchInput" placeholder="Search...">
+<div id="searchResults"></div>
+<!-- <div id="box1">How to connect javascript file with html?</div>
+<div id="box2">How to start DSA?</div>
+<div id="box3">How to use CSS for stylinh?</div>
+<div id="box4">What is ReactJS</div>
+<div id="box5">How to use SQL?</div> -->
+<p class="styleparagraph">How to connect javascript file with html? <br>  How to start DSA? <br> How to use CSS for styling? <br> What is ReactJS? <br> How to use SQL?</p>
+<script>
+  // Sample data for demonstration
+  const data = [
+    "How to connect javascript file with html?",
+    "How to start DSA?",
+    "How to use CSS for styling?",
+    "What is ReactJS?",
+    "How to use SQL?"
+  ];
+
+  // Function to perform search
+  function performSearch(query) {
+    const results = data.filter(item => item.toLowerCase().includes(query.toLowerCase()));
+    displayResults(results);
+  }
+
+  // Function to display search results
+  function displayResults(results) {
+    const resultsContainer = document.getElementById('searchResults');
+    resultsContainer.innerHTML = '';
+
+    if (results.length === 0) {
+      resultsContainer.innerHTML = 'No results found.';
+    } else {
+      const ul = document.createElement('ul');
+      results.forEach(result => {
+        const li = document.createElement('li');
+        li.textContent = result;
+        ul.appendChild(li);
+      });
+      resultsContainer.appendChild(ul);
+    }
+  }
+
+  // Event listener for keyup event on search input
+  document.getElementById('searchInput').addEventListener('keyup', function(event) {
+    const query = event.target.value.trim();
+    performSearch(query);
+  });
+</script>
+
+</body>
+</html>
