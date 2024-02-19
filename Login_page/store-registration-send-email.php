@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['password-reset-token']) && $_POST['email'])
 {
-    include "db.php";
+    include "connection.php";
 
     $result = mysqli_query($conn,"SELECT * FROM users WHERE email='" . $_POST['email'] . "'");
 
