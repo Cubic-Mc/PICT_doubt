@@ -1,5 +1,5 @@
 /* Add a black background color to the top navigation */
-body {
+/* body {
     margin: 0px;
 }
 
@@ -21,24 +21,92 @@ main {
     overflow: hidden;
   }
   /* Style the links inside the navigation bar */
-  .topnav a {
+  /* .topnav a {
     float: right;
     color: #f0ebeb;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
+  } */
   
   /* Change the color of links on hover */
-  .topnav a:hover {
+  /* .topnav a:hover {
     background-color: #aca9a9;
     color: rgb(245, 236, 236);
     text-underline-offset: #fff;
-  }
+  } */
   
   /* Add a color to the active/current link */
-  .topnav a.active {
+  /* .topnav a.active {
     background-color: #6becb4;
     color: white;
   }
+
+  h1,p{
+    color: rgb(85, 22, 144);
+  } */
+
+  /* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Navigation bar styles */
+.topnav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: right; 
+}
+
+.topnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+} 
+
+.topnav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.topnav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main content styles */
+main {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #45128c;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Image container styles */
+.image-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
