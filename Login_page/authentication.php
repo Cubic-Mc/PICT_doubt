@@ -1,14 +1,14 @@
 <?php      
     include('connection.php');  
-    $username = $_POST['user'];  
+    $name = $_POST['user'];  
     $password = $_POST['pass'];  
        
-        $username = stripcslashes($username);  
+        $name = stripcslashes($name);  
         $password = stripcslashes($password);  
-        $username = mysqli_real_escape_string($con, $username);  
+        $name = mysqli_real_escape_string($con, $name);  
         $password = mysqli_real_escape_string($con, $password);  
       
-        $sql = "select *from dbuser where username = '$username' and password = '$password'";  
+        $sql = "select *from users where name = '$name' and password = '$password'";  
         $result = mysqli_query($con, $sql);  
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
         $count = mysqli_num_rows($result);  
