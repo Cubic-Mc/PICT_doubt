@@ -18,6 +18,7 @@
             exit();  
         }  
         else{  
-            echo "<h1> Login failed. Invalid username or password.</h1>";  
+            echo "<script>window.location.href = 'index.html';</script>";
+            echo "<script>alert('Incorrect Username or Password!');</script>";
         }     
 ?>  
