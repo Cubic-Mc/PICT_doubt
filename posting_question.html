@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post and Access Question</title>
+    <link rel="stylesheet" href="style_13.css">
+    <style>
+        #postForm {
+            margin-bottom: 20px;
+        }
+        #postsContainer {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Post and Access Question</h1>
+    
+    <form id="postForm">
+        <label for="postInput">Post something:</label><br>
+        <input type="text" id="postInput" name="postInput"><br>
+        <button type="button" onclick="postMessage()">Post</button>
+    </form>
+    
+    <div id="postsContainer">
+        <h2>Posts:</h2>
+        <ul id="postsList"></ul>
+    </div>
+    
+    <script>
+        function postMessage() {
+            const postInput = document.getElementById("postInput");
+            const message = postInput.value;
+            
+            if (message.trim() === "") {
+                alert("Please enter a message.");
+                return;
+            }
+            
+            const postsList = document.getElementById("postsList");
+            const li = document.createElement("li");
+            li.textContent = message;
+            postsList.appendChild(li);
+            
+            postInput.value = "";
+        }
+    </script>
+</body>
+</html>
