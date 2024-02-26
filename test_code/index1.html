@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* CSS styles for recent questions */
+        .question {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recent Questions</h1>
+    <div id="recent-questions"></div>
+    <script>
+        // Sample array of recent questions
+        const recentQuestions = [
+            { id: 1, title: "How to create a notification page using JavaScript and HTML?" },
+            { id: 2, title: "How to add recent questions on the main home page?" },
+            { id: 3, title: "How to make a notification page with code in the same file?" }
+        ];
+
+        // Function to render recent questions
+        function renderRecentQuestions() {
+            const recentQuestionsContainer = document.getElementById('recent-questions');
+            recentQuestions.forEach(question => {
+                const questionElement = document.createElement('div');
+                questionElement.classList.add('question');
+                questionElement.innerHTML = `<a href="question.html?id=${question.id}">${question.title}</a>`;
+                recentQuestionsContainer.appendChild(questionElement);
+            });
+        }
+
+        // Call the renderRecentQuestions function to display the recent questions
+        renderRecentQuestions();
+    </script>
+</body>
+</html>
