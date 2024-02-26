@@ -15,8 +15,9 @@
         $count_email = mysqli_num_rows($result);
 
         if ($count_user == 0 && $count_email == 0){
+            $hash = password_hash($password,PASSWORD_DEFAULT);
             if($password == $cpassword){
-                $sql = "INSERT INTO dbuser(username, email, password) VALUES('$username','$email','$password')";
+                $sql = "INSERT INTO dbuser(username, email, password) VALUES('$username','$email','$hash')";
                 $result = mysqli_query($conn, $sql);
                 if($result){
                     header("Location: welcome.html");
