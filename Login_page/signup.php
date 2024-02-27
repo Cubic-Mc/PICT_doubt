@@ -20,7 +20,8 @@
                 $sql = "INSERT INTO dbuser(username, email, password) VALUES('$username','$email','$hash')";
                 $result = mysqli_query($conn, $sql);
                 if($result){
-                    header("Location: welcome.html");
+                    echo "<font size=\"18\" face=\"Arial\" align=\"center\">You may login now. Redirecting...";
+                    header( "refresh:5; url=index.html" );
                     exit();
                 } else {
                     echo '<script>
