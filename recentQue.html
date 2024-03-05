@@ -6,24 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <style>
-        /* CSS styles for recent questions */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
         .question {
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            background-color: white;
+            transition: background-color 0.3s;
+        }
+
+        .question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .question a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .question a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <h1>Recent Questions</h1>
-    <div id="recent-questions"></div>
+    <div class="container" id="recent-questions"></div>
     <script>
         // Sample array of recent questions
         const recentQuestions = [
             { id: 1, title: "1.How to create a notification page using JavaScript and HTML?" },
             { id: 2, title: "2.How to add recent questions on the main home page?" },
-            { id: 3, title: "3.How to make a notification page with code in the same file?" }
+            { id: 3, title: "3.How to make a notification page with code in the same file?" },
+            { id: 4, title: "4.What is SQL?"},
+            { id: 5, title: "5.How to download XAMP?"}
         ];
 
         // Function to render recent questions
