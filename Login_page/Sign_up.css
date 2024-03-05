@@ -76,8 +76,22 @@ h2 {
   color: #fff;
 }
 
-.input-field input:focus~label,
-.input-field input:valid~label {
+/* .input-field input:focus~label,
+.input-field input:valid~label,
+.input-field input:placeholder-shown ~ label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+} */
+
+.input-field input:placeholder-shown ~ label {
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-field input:focus ~ label,
+.input-field input:not(:placeholder-shown) ~ label {
   font-size: 0.8rem;
   top: 10px;
   transform: translateY(-120%);

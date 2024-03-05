@@ -15,6 +15,7 @@
         if(password_verify($password, $hashed_password)) {
             header("Location: /PICT_doubt/members_Area/welcome.php");
             exit();  
+            
         } else {
             echo "<script>window.location.href = 'index.html';</script>";
         }
