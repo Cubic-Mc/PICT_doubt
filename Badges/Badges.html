@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Images Gallery</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .image {
+    max-width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .info {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="gallery">
+  <div class="image">
+    <img src="Badge1.jpg.jpeg" alt="Badge1">
+    <div class="info">50 Questions, Badge will unlocked</div>
+  </div>
+  <div class="image">
+    <img src="Badge2.jpg.jpeg" alt="Badge2">
+    <div class="info">Active Member for 3 months</div>
+  </div>
+  <div class="image">
+    <img src="Badge3.jpg.jpeg" alt="Badge3">
+    <div class="info">20 Questions,Badge will unlocked</div>
+  </div>
+  <div class="image">
+    <img src="Badge4.jpg.jpeg" alt="Badge4">
+    <div class="info">Congratulations u become a moderator</div>
+  </div>
+  <div class="image">
+    <img src="Badge5.jpg.jpeg" alt="Badge5">
+    <div class="info">5 Questions, Badge will be unlocked!!</div>
+  </div>
+  <div class="image">
+    <img src="Badge6.jpg.jpeg" alt="Badge6">
+    <div class="info">Active member for 6 months</div>
+  </div>
+</div>
+</body>
+</html>
