@@ -1,3 +1,22 @@
+<?php
+include('PICT_doubt/Login_page/connection.php');
+
+// Check if the user is set in the POST request
+if(isset($_POST['user'])) {
+    $user = $_POST['user'];
+
+    // Perform SQL query
+    $query = "SELECT * FROM dbuser WHERE user='$user'";
+    $result = mysqli_query($conn, $query);
+
+    if($result) {
+        // Fetch the row
+        $row = mysqli_fetch_assoc($result);
+        $username = $row['username'];
+    } 
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +29,7 @@
 <body>
     <nav class="topnav">
         <ul>
-            <li><a href="Login_page/index.html"></a></li>
+            <li><a href="Login_page/index.html"><?php echo $user; ?></a></li>
             <li><a href="#notifications"><i class="fa-solid fa-bell" style="color: #f2212c;"></i></a></li>
             <li><a href="/PICT_doubt/posting_question.html"><i class="fa-solid fa-comments fa-flip" style="color: #e11432;"></i></a></li>
             <li><a href="/PICT_doubt/community/community.html"><i class="fa-solid fa-people-group" style="color: #e11432;"></i></a></li>
