@@ -1,5 +1,8 @@
 <?php
-include('PICT_doubt/Login_page/connection.php');
+include('../Login_page/connection.php');
+
+// Initialize $username variable
+$user1 = "";
 
 // Check if the user is set in the POST request
 if(isset($_POST['user'])) {
@@ -10,13 +13,21 @@ if(isset($_POST['user'])) {
     $result = mysqli_query($conn, $query);
 
     if($result) {
-        // Fetch the row
-        $row = mysqli_fetch_assoc($result);
-        $username = $row['username'];
-    } 
+        // Check if any rows were returned
+        if(mysqli_num_rows($result) > 0) {
+            // Fetch the row
+            $row = mysqli_fetch_assoc($result);
+            $user1 = $row['username'];
+        } else {
+            // No user found
+            $user1 = "User not found";0
+        }
+    } else {
+        // Query execution failed
+        $user1 = "Error executing query: " . mysqli_error($conn);
+    }65
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +40,7 @@ if(isset($_POST['user'])) {
 <body>
     <nav class="topnav">
         <ul>
-            <li><a href="Login_page/index.html"><?php echo $user; ?></a></li>
+            <li><a href="Login_page/index.html"><?php echo $user1; ?></a></li>
             <li><a href="#notifications"><i class="fa-solid fa-bell" style="color: #f2212c;"></i></a></li>
             <li><a href="/PICT_doubt/posting_question.html"><i class="fa-solid fa-comments fa-flip" style="color: #e11432;"></i></a></li>
             <li><a href="/PICT_doubt/community/community.html"><i class="fa-solid fa-people-group" style="color: #e11432;"></i></a></li>
