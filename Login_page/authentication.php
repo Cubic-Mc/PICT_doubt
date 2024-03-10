@@ -13,8 +13,9 @@
         $row = mysqli_fetch_assoc($result);
         $hashed_password = $row['password'];
         if(password_verify($password, $hashed_password)) {
-            header("Location: welcome.html");
+            header("Location: /PICT_doubt/members_Area/welcome.php");
             exit();  
+            
         } else {
             echo "<script>window.location.href = 'index.html';</script>";
         }

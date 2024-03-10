@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background color */
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with the path to your image */
+    background-size: cover; /* Cover the whole viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    font-family: Arial, sans-serif; /* Optional: Set font-family for better readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* White background color */
+    /* border-radius: 100px; Rounded corners */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Box shadow for depth */
+ */
+ .container {
+    max-width: 600px;
+   margin: 50px auto; 
+   background-color: #fff;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Dark gray color for headings */
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#text {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Add border for text area */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#image {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff; /* White background color for posts */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensure images don't affect layout */
+    margin: 0 auto; /* Center images */
+}
+
+.post button {
+    margin-top: 10px;
+}
+.like-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.like-button:hover {
+    background-color: #0056b3;
+}
