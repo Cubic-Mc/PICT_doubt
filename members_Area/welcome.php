@@ -9,7 +9,7 @@ if(isset($_POST['user'])) {
     $user = $_POST['user'];
 
     // Perform SQL query
-    $query = "SELECT * FROM dbuser WHERE user='$user'";
+    $query = "SELECT * FROM dbuser WHERE username='$user'";
     $result = mysqli_query($conn, $query);
 
     if($result) {
@@ -20,12 +20,12 @@ if(isset($_POST['user'])) {
             $user1 = $row['username'];
         } else {
             // No user found
-            $user1 = "User not found";0
+            $user1 = "User not found";
         }
     } else {
         // Query execution failed
         $user1 = "Error executing query: " . mysqli_error($conn);
-    }65
+    }
 }
 ?>
 <!DOCTYPE html>
