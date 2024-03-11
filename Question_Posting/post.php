@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+
 $servername = "localhost";
 $username = "root"; // Change as per your MySQL username
 $password = ""; // Change as per your MySQL password
@@ -20,7 +23,7 @@ $image_path = 'uploads/' . $image;
 
 if(move_uploaded_file($image_tmp, $image_path)) {
     // Insert data into database
-    $sql = "INSERT INTO posts (text, image) VALUES ('$text', '$image')";
+    $sql = "INSERT INTO posts (username,text, image) VALUES ('{$_SESSION['display_user']}','$text', '$image')";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {

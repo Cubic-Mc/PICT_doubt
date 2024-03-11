@@ -1,11 +1,13 @@
 <?php
+session_start();
+
 $servername = "localhost";
 $username = "root"; // Change as per your MySQL username
 $password = ""; // Change as per your MySQL password
-$dbname = "posts";
+$dbname = "doubtforum";
 
 // Get post ID from query parameter
-$postId = $_GET['id'];
+$user = $_SESSION['display_user'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,7 +18,7 @@ if ($conn->connect_error) {
 }
 
 // Delete post from database
-$sql = "DELETE FROM posts WHERE id = $postId";
+$sql = "DELETE FROM posts WHERE username = $user";
 
 if ($conn->query($sql) === TRUE) {
     echo "Post deleted successfully";
