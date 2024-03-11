@@ -46,7 +46,7 @@
                     postDiv.innerHTML = `
                         <p>${post.text}</p>
                         <img src="uploads/${post.image}" alt="Posted Image">
-                        <button onclick="deletePost(${post.user})">Delete</button>
+                        <button onclick="deletePost(${post.id})">Delete</button>
                     `;
                     postedContentDiv.appendChild(postDiv);
                 });
@@ -55,9 +55,9 @@
         }
 
         // Function to delete a post
-        function deletePost(user) {
+        function deletePost(postId) {
             if (confirm('Are you sure you want to delete this post?')) {
-                fetch(`delete_post.php?username=${user}`, { method: 'DELETE' })
+                fetch(`delete_post.php?id=${postId}`, { method: 'DELETE' })
                 .then(response => {
                     if (response.ok) {
                         fetchPostedContent(); // Refresh posted content after deletion
@@ -68,9 +68,9 @@
                 .catch(error => console.error('Error deleting post:', error));
             }
         }
-        function likePost(user) {
+        function likePost(postId) {
             // You can implement the logic for liking a post here
-            alert(`You liked post with ID: ${user}`);
+            alert(`You liked post with ID: ${postId}`);
         }
 
         // Fetch and display posted content on page load
