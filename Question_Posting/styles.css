@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0; /* Light gray background color */
     background-image: url('background.jpg'); /* Replace 'background.jpg' with the path to your image */
-    background-size: cover; /* Cover the whole viewport */
-    background-position: center; /* Center the background image */
+    background-size: cover; /*Cover the whole viewport */
+    background-position: center top; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the image */
     font-family: Arial, sans-serif; /* Optional: Set font-family for better readability */
     margin: 0; /* Remove default margin */
