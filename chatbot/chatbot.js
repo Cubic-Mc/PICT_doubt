@@ -75,7 +75,7 @@ const userMessage = [
     
     
     "Ask something else...",
-    "cuurently i can't give this answer but soon i will be able to give this answer"
+    " sorry but cuurently I can't give this answer but soon I will be able to give this answer"
     
   ];
   
