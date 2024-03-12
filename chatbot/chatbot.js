@@ -52,9 +52,9 @@ const userMessage = [
     ],
     ["I am always young."],
     ["I am just a bot", "I am a bot. What are you?"],
-    ["Sabitha Kuppusamy"],
-    ["I am nameless", "I don't have a name"],
-    ["I love you too", "Me too"],
+    ["Harshvardhan Bhosale"],
+    ["I am a bot created by PICT students", "I don't have a name i am a bot"],
+    ["I love you too 😍", "Me too 😍"],
     ["Have you ever felt bad?", "Glad to hear it"],
     ["Why?", "Why? You shouldn't!", "Try watching TV", "Chat with me."],
     ["What about?", "Once upon a time..."],
@@ -71,11 +71,12 @@ const userMessage = [
   ];
   
   const alternative = [
-    "Same here, dude.",
-    "That's cool! Go on...",
-    "Dude...",
+    
+    
+    
     "Ask something else...",
-    "Hey, I'm listening..."
+    "cuurently i can't give this answer but soon i will be able to give this answer"
+    
   ];
   
   const synth = window.speechSynthesis;
