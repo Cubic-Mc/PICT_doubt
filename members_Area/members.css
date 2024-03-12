@@ -117,3 +117,28 @@ p {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.chat-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 100px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.chat-icon {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.chat-icon img {
+  width: 30px;
+  height: 30px;
+}

@@ -37,5 +37,10 @@ session_start();
         <img src="/PICT_doubt/Pict gate 3.jpg" alt="Centred Image">
         <!-- <figcaption>This is a caption for the image.</figcaption> -->
     </figure>
+    <div class="chat-box">
+        <div class="chat-icon">
+            <a href="chatbot/chatbot.html"><img src="chat-icon.jpeg" alt="Chat Icon"></a>
+        </div>
+    </div>
 </body>
 </html>
