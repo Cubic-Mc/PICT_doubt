@@ -39,7 +39,7 @@ session_start();
     </figure>
     <div class="chat-box">
         <div class="chat-icon">
-            <a href="PICT_doubt/chatbot/chatbot.html"><img src="PICT_doubt/chat-icon.jpeg" alt="Chat Icon"></a>
+            <a href="/PICT_doubt/chatbot/chatbot.html"><img src="/PICT_doubt/chat-icon.jpeg" alt="Chat Icon"></a>
         </div>
     </div>
 </body>
