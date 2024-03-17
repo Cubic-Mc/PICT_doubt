@@ -2,7 +2,6 @@
     session_start();
     $_SESSION['display_user'] = $_POST['user'];
     include('connection.php');
-    include('../members_Area/welcome.php');
     
     $name = $_POST['user'];  
     $password = $_POST['pass'];
@@ -19,11 +18,10 @@
             header("Location: /PICT_doubt/members_Area/welcome.php");
             exit();  
             
-    //     } else {
-    //         echo "<script>window.location.href = 'index.html';</script>";
-    //     }
-    // } else {
-    //     echo "<script>window.location.href = 'index.html';</script>";
+        } else {
+            echo "<script>window.location.href = 'index.html';</script>";
+        }
+    } else {
+        echo "<script>window.location.href = 'index.html';</script>";
     }
-}    
 ?>

@@ -10,13 +10,13 @@
 
 <body>
     <div class="container" id = "frm">
-        <form name="f1" action = "javascript:submitform()" onsubmit = "return validation()" method = "POST">
+        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">
             <h2>Login</h2>
             <div class="input-field">
                 <input type="text" id ="user" name  = "user" required />
                 <label>Enter Username</label>
             </div>
-            <div class="input-field">2
+            <div class="input-field">
                 <input type="password" id ="pass" name  = "pass" required />
                 <label>Enter password</label>
             </div>
@@ -36,7 +36,7 @@
     <script>  
         function submitform() {
             // Submit to authentication.php
-            $.post( "formProcess.php", function( data ) {
+            $.post( "authenication.php", function( data ) {
                 // handle data from formProcess.php
             });
             $.post( "Portal.php", function( data ) {
