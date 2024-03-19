@@ -19,6 +19,7 @@ session_start();
 <body>
     <nav class="topnav">
         <ul>
+            <li class = active><a href = #><i class="fa fa-home" aria-hidden="true"></i></a></li>
             <li><div class="dropdown">
                     <button class="dropbtn"><?php echo $_SESSION['display_user']; ?></button>
                     <div class="dropdown-content">
@@ -26,10 +27,9 @@ session_start();
                     </div>
                 </div>
             </li>
-            <li><a href="#notifications"><i class="fa-solid fa-bell" style="color: #f2212c;"></i></a></li>
+            <li class><a href="#notifications"><i class="fa-solid fa-bell" style="color: #f2212c;"></i></a></li>
             <li><a href="/PICT_doubt/Question_Posting/index.html"><i class="fa-solid fa-comments fa-flip" style="color: #e11432;"></i></a></li>
-            <li><a href="/PICT_doubt/Badges/Badges.html"><i class="fa-solid fa-people-group" style="color: #e11432;"></i></a></li>
-            <li><a href="index1.html"><i class="fa-sharp fa-solid fa-house" style="color: #e11432;"></i></a></li>
+            <li><a href="/PICT_doubt/Badges/Badges.php"><i class="fa-solid fa-people-group" style="color: #e11432;"></i></a></li>
             <li><a href="/PICT_doubt/Search.html"><i class="fa fa-search" style="color: #e11432"></i></a></li>
         </ul>
     </nav>
