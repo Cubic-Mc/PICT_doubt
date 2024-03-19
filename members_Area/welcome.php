@@ -49,7 +49,7 @@ session_start();
       </button>
       <div class="chatbot">
         <header>
-          <h2>Chatbot</h2>
+          <h2>Queryquill</h2>
           <span class="close-btn material-symbols-outlined">close</span>
         </header>
         <ul class="chatbox">
