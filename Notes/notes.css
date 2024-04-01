@@ -88,10 +88,10 @@ body {
 
 .active {
   background-color: #838282;
+  padding-left: 14px;
   padding-top: 14px;
   padding-bottom: 14px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 14px;
 }
 
 .home {
@@ -176,3 +176,37 @@ body {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container ul li {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.container ul li a:hover {
+  text-decoration: underline;
+}
+
+.fa-file-pdf {
+  color: red;
+}
