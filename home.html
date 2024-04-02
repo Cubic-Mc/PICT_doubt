@@ -16,10 +16,11 @@
 <body>
     <nav class="topnav">
         <ul>
-            <li><a href="Login_page/index.html">Login</a></li>
+            <li><a href="Login_page/index.html" onclick="setMessage('Login to get access to notes and doubt posting!')">Login</a></li>
             <li><a href="#notifications"><i class="fa-solid fa-bell" style="color: #f2212c;"></i></a></li>
-            <li><a href="Login_page/index.html"><i class="fa-solid fa-comments fa-flip" style="color: #e11432;"></i></a></li>
-            <li><a href="Login_page/index.html"><i class="fa-solid fa-people-group" style="color: #e11432;"></i></a></li>
+            <li><a href="Login_page/index.html" onclick="setMessage('To get access to full free Notes, Please Login!')"><i class="fa-solid fa-book" style="color: #e11432;"></i></a></li>
+            <li><a href="Login_page/index.html" onclick="setMessage('To post questions, Please Login!')"><i class="fa-solid fa-comments fa-flip" style="color: #e11432;"></i></a></li>
+            <li><a href="Login_page/index.html" onclick="setMessage('To see the leaderboard, Please Login!')"><i class="fa-solid fa-people-group" style="color: #e11432;"></i></a></li>
             <li><a href="Search.html"><i class="fa fa-search" style="color: #e11432"></i></a></li>
         </ul>
     </nav>
@@ -53,5 +54,11 @@
           <span id="send-btn" class="material-symbols-rounded">send</span>
         </div>
       </div>
+    <script>
+      function setMessage(message) {
+        localStorage.setItem('message', message);
+        window.location.href = "Login_page/index.html";
+    }
+  </script>
 </body>
 </html>

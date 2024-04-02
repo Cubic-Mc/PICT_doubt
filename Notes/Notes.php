@@ -41,11 +41,10 @@
                 </a>
             </li>
             <li>
-                <a href="npdfs/note3.pdf" target="_blank">
-                    <i class="fas fa-file-pdf"></i> Note 3
+                <a href="Misc_pdfs/Unit 1 Water Technology_All.pptx" target="_blank">
+                <i class="fa-solid fa-file-powerpoint" style="color: #ff4405;"></i> Chemistry Unit 1 ppt
                 </a>
             </li>
-            <!-- Add more PDF links as needed -->
         </ul>
     </div>
 </body>

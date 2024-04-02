@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <div id="message" class="message-container"></div>
     <div class="container" id = "frm">
         <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">
             <h2>Login</h2>
@@ -46,7 +47,13 @@
         if (document.referrer.includes("authentication.php")) {
             alert("Incorrect Username or Password!");
         }
+        document.addEventListener("DOMContentLoaded", function() {
+            const message = localStorage.getItem('message');
+
+            if (message) {
+                document.getElementById('message').textContent = `${message}`;
+            }
+        });
     </script>
 </body>
-
 </html>
