@@ -2,27 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Mode Toggle | Helpme_coder</title>
+    <title>PICT Doubt Forum</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/chat bot API/style.css">
+    <script src="/chat bot API/script.js" defer></script>
 </head>
 <body>
+    <header>
+        <h1>PICT doubt Forum</h1>
+        <p>Get Help and Share Knowledge</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Ask a Question</a>
+        <a href="services.html">Services</a>  <a href="#">About Us</a>
+    </nav>
     
-    <h1 style="height: 60%; margin-top: 200px; margin-left: 350px;">Dark Mode</h1>
-    <div class="custom-checkbox">
-        <input id="status" type="checkbox" name="status">
-        <label for="status">
-            <div class="status-switch" data-unchecked="Off" data-checked="On"></div>
-        </label>
-    </div>
-
-    <script>
-        const checkbox = document.getElementById("status");
-
-        checkbox.addEventListener("change", function () {
-            document.body.classList.toggle("dark-mode", checkbox.checked);
-        });
-    </script>
+    <main>
+        <section class="questions">
+            <h2>Latest Questions</h2>
+            <article>
+                <h3>What is the capital of France?</h3>
+                <p>I'm studying for a geography test and I can't remember the capital of France. Can anyone help?</p>
+                <a href="#">See Answers</a>
+            </article>
+            <article>
+                <h3>How do I write a JavaScript function?</h3>
+                <p>I'm new to JavaScript and I'm not sure how to write functions. Can someone provide an example?</p>
+                <a href="#">See Answers</a>
+            </article>
+        </section>
+        <section class="ask-now">
+            <h2>Have a Doubt? Ask Now!</h2>
+            <form action="#" onsubmit="return validateForm()">
+                <label for="question">Your Question:</label>
+                <textarea name="question" id="question" rows="5"></textarea>
+                <label for="category">Category:</label>
+                <select name="category" id="category">
+                    <option value="">Select a Category</option>
+                    <option value="math">Math</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="other">Other</option>
+                </select>
+                <button type="submit">Ask Now</button>
+            </form>
+        </section>
+    </main>
+    <button class="chatbot-toggler">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div class="chatbot">
+        <header>
+          <h2>Queryquill</h2>
+          <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+          <li class="chat incoming">
+            <span class="material-symbols-outlined">smart_toy</span>
+            <p>Hi there 👋<br>How can I help you today?</p>
+          </li>
+        </ul>
+        <div class="chat-input">
+          <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+          <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+      </div>
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; My Doubt Forum 2024</p>
+    </footer>
 </body>
 </html>
