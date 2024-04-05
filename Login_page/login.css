@@ -144,7 +144,7 @@ button:hover {
     color: rgb(255, 255, 255);
     display: block !important;
     align-items: center;
-    padding-right: 300px;
+    margin-right: 200px;
     font-size: 30px;
     font-weight: 100px;
 }
