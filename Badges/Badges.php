@@ -20,11 +20,11 @@
                     </div>
                 </div>
             </li>
-            <li><a href="#notifications"><i class="fa-solid fa-bell" style="color: #f2212c;"></i></a></li>
-            <li><a href= "/PICT_doubt/Notes/Notes.php"><i class="fa-solid fa-book" style="color: #e11432;"></i></a></li>
-            <li><a href="/PICT_doubt/Question_Posting/index.php"><i class="fa-solid fa-comments fa-flip" style="color: #e11432;"></i></a></li>
-            <li class = active><a href="#/PICT_doubt/Badges/Badges.php"><i class="fa-solid fa-people-group" style="color: #e11432;"></i></a></li>
-            <li><a href="/PICT_doubt/Search.html"><i class="fa fa-search" style="color: #e11432"></i></a></li>
+            <li><a href="#notifications"><i class="fa-solid fa-bell" style="color: #f2212c;margin-right: 5px;"></i>Notifications</a></li>
+            <li><a href= "/PICT_doubt/Notes/Notes.php"><i class="fa-solid fa-book" style="color: #e11432;margin-right: 5px;"></i>Notes</a></li>
+            <li><a href="/PICT_doubt/Question_Posting/index.php"><i class="fa-solid fa-comments fa-flip" style="color: #e11432;margin-right: 5px;"></i>Q/A</a></li>
+            <li class = active><a href="#/PICT_doubt/Badges/Badges.php"><i class="fa-solid fa-people-group" style="color: #e11432;margin-right: 5px;"></i>Leaderboard</a></li>
+            <li><a href="/PICT_doubt/Search.html"><i class="fa fa-search" style="color: #e11432;margin-right: 5px;"></i>Search</a></li>
         </ul>
     </nav>
 <div class="gallery">
