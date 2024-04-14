@@ -22,7 +22,6 @@ body {
 .active {
   background-color: #838282;
   padding: 13px;
-  float: left;
 }
 
 
@@ -85,7 +84,6 @@ p {
   font-size: 16px;
   border: none;
   display: block; /* Ensure it takes up the entire width */
-  height: 100%;
   width: 100%; /* Make the button fill up the entire space */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }

@@ -1,10 +1,9 @@
 <?php
 session_start();
-
-
+// Connect to your database (replace with your database credentials)
 $servername = "localhost";
-$username = "root"; // Change as per your MySQL username
-$password = ""; // Change as per your MySQL password
+$username = "root";
+$password = "";
 $dbname = "doubtforum";
 
 // Create connection
@@ -15,23 +14,31 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Handle text and image upload
-$text = $_POST['text'];
-$image = $_FILES['image']['name'];
-$image_tmp = $_FILES['image']['tmp_name'];
-$image_path = 'uploads/' . $image;
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data
+    $question_text = $_POST['text'];
+    
+    // Check if an image is uploaded
+    if ($_FILES['image']['size'] > 0) {
+        $image_name = $_FILES['image']['name'];
+        $image_temp = $_FILES['image']['tmp_name'];
 
-if(move_uploaded_file($image_tmp, $image_path)) {
+        // Upload image to server
+        move_uploaded_file($image_temp, "uploads/" . $image_name);
+    } else {
+        $image_name = ""; // Set empty string if no image uploaded
+    }
+
     // Insert data into database
-    $sql = "INSERT INTO posts (username,text, image) VALUES ('{$_SESSION['display_user']}','$text', '$image')";
+    $sql = "INSERT INTO posts (text, image, username) VALUES ('$question_text', '$image_name', '" . $_SESSION['display_user'] . "')";
     if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo "Post added successfully";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-} else {
-    echo "Failed to upload image";
 }
 
+// Close the connection
 $conn->close();
 ?>
